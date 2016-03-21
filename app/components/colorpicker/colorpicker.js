@@ -1,6 +1,18 @@
 'use strict'
 
-angular.module('myApp.colorpicker', [])
+function colorpicker (colorsApi) {
+  colorsApi.loadColors()
+    .then(function (colors) {
+      this.red = this.red || colors.red
+      this.green = this.green || colors.green
+      this.blue = this.blue || colors.blue
+      this.alpha = this.alpha || colors.alpha
+    }.bind(this))
+}
+
+angular.module('myApp.colorpicker', [
+  'myApp.colors-api'
+])
   .component('colorpicker', {
     bindings: {
       red: '@',
@@ -8,5 +20,6 @@ angular.module('myApp.colorpicker', [])
       blue: '=',
       alpha: '='
     },
+    controller: colorpicker,
     templateUrl: 'components/colorpicker/colorpicker.html'
   })
