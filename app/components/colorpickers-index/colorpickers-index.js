@@ -1,14 +1,16 @@
 'use strict'
 
-angular.module('myApp.colorpickers-index', [])
+angular.module('myApp.colorpickers-index', [
+  'myApp.colors-api'
+])
   // <colorpickers-index></colorpickers-index>
   .component('colorpickersIndex', {
     // Ja, das geht. Sollte aber seperat dadrüber stehen.
-    controller: function () {
-      this.red = 255
-      this.green = 0
-      this.blue = 0
-      this.alpha = 0.5
+    controller: function (colorsApi) {
+      colorsApi.loadColors()
+        .then(function (colors) {
+          angular.extend(this, colors)
+        }.bind(this))
     },
     templateUrl: 'components/colorpickers-index/colorpickers-index.html'
   })
