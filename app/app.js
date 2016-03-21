@@ -5,12 +5,13 @@ angular.module('myApp', [
   'ngRoute',
   // internal Modules
   'myApp.colorpicker',
-  'myApp.colorpickers-index'
+  'myApp.colorpickers-index',
+  'myApp.greeter-index'
 ])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        template: '<h1>It works</h1>'
+        template: '<greeter-index></greeter-index>'
       })
       .when('/sure', {
         template: '<h1>Yes, really!</h1>'
