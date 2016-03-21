@@ -10,16 +10,10 @@
 <body ng-init="red=255; green=0; blue=0; alpha=0.5">
   <div class="container">
 
+    <ng-view></ng-view>
+
     <h1>Hello {{ name }}!</h1>
     <input type="text" ng-model="name" />
-    
-    <colorpicker red="{{red}}" green="{{green}}" blue="blue" alpha="alpha"></colorpicker>
-    <hr>
-    <colorpicker green="{{green}}" blue="blue" alpha="alpha"></colorpicker>
-    <hr>
-    <colorpicker green="{{green}}" blue="blue" alpha="alpha"></colorpicker>
-    <hr>
-    <colorpicker blue="blue" alpha="alpha"></colorpicker>
 
   </div>
   <!-- 3rd-Party Libs -->
