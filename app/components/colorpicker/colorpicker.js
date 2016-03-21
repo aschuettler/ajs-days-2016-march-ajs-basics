@@ -5,7 +5,8 @@ angular.module('myApp.colorpicker', [])
     bindings: {
       red: '@',
       green: '@',
-      blue: '='
+      blue: '=',
+      alpha: '='
     },
     templateUrl: 'components/colorpicker/colorpicker.html'
   })

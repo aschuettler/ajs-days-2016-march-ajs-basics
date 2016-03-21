@@ -7,17 +7,17 @@
   <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="stylesheets/main.css">
 </head>
-<body ng-init="red=255; green=0; blue=0;">
+<body ng-init="red=255; green=0; blue=0; alpha=0.5">
   <div class="container">
 
     <h1>Hello {{ name }}!</h1>
     <input type="text" ng-model="name" />
     
-    <colorpicker red="{{red}}" green="{{green}}" blue="blue"></colorpicker>
+    <colorpicker red="{{red}}" green="{{green}}" blue="blue" alpha="alpha"></colorpicker>
     <hr>
-    <colorpicker red="{{red}}" green="{{green}}" blue="blue"></colorpicker>
+    <colorpicker red="{{red}}" green="{{green}}" blue="blue" alpha="alpha"></colorpicker>
     <hr>
-    <colorpicker red="{{red}}" green="{{green}}" blue="blue"></colorpicker>
+    <colorpicker red="{{red}}" green="{{green}}" blue="blue" alpha="alpha"></colorpicker>
 
   </div>
   <!-- 3rd-Party Libs -->
