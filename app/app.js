@@ -4,7 +4,8 @@ angular.module('myApp', [
   // external Modules
   'ngRoute',
   // internal Modules
-  'myApp.colorpicker'
+  'myApp.colorpicker',
+  'myApp.colorpickers-index'
 ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -13,5 +14,8 @@ angular.module('myApp', [
       })
       .when('/sure', {
         template: '<h1>Yes, really!</h1>'
+      })
+      .when('/colorpickers', {
+        template: '<colorpickers-index></colorpickers-index>'
       })
   })

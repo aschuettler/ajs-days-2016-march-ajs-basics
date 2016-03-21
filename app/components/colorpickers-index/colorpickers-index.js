@@ -10,5 +10,5 @@ angular.module('myApp.colorpickers-index', [])
       this.blue = 0
       this.alpha = 0.5
     },
-    templateUrl: 'components/colorpickers-index/colorpickers-index.js'
+    templateUrl: 'components/colorpickers-index/colorpickers-index.html'
   })
